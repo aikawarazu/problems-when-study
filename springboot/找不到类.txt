@@ -26,4 +26,8 @@ public class SpringBootHelloController {
 Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.ListableBeanFactory
 
 还报错找不到Controller类。明明都已经在项目里了。类都能从explore中找到。eclipse还说找不到类。
-清除项目没用，maven环境disable再打开，没用。想到最近换了阿里的maven仓库，会不会是版本不对的原因，把本地maven下载好的库都删掉，maven重新update后，终于正常了
+清除项目没用，maven环境disable再打开，没用。想到最近换了阿里的maven仓库，会不会是版本不对的原因，把本地maven下载好的库都删掉，maven重新update后，终于正常了.
+
+接下来，明明程序正确，却还是无法访问项目，折腾了一晚上，第二天回来，试着把整个maven清空（repository），再次运行，成功。
+感觉是阿里的maven库的问题。
+以后换maven仓库的时候，即使是镜像仓库，遇到无法解释的问题，先试着把整个本地仓库清空再说。
